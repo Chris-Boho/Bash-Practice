@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#Christopher Bohorquez  PID: 6039295
+#write a script that will add to the PATH environment variable one or
+#or two directory paths using command line arguments. Make sure to test
+#your script with the source command.
+
+if [[ $# = 1 ]]; then
+
+  if [[ -d "$1" ]]; then
+    echo "You want to add" $1
+    export PATH=$PATH:$1
+    echo "Your new PATH environment variable is: "
+    echo $PATH
+  else
+    echo $1 "does not exist!"
+  fi
+
+elif [[ $# = 2 ]]; then
+
+  if [[ -d "$1" ]]; then
+    echo "You want to add" $1
+    export PATH=$PATH:$1
+  else
+    echo $1 "does not exist!"
+  fi
+
+  if [[ -d "$2" ]]; then
+    echo "You want to add" $2
+    export PATH=$PATH:$2
+    echo "Your new PATH environment variable is: "
+    echo $PATH
+  else
+    echo $2 "does not exist!"
+  fi
+
+else
+  echo "Too many or not enough arguments...   Try again!"
+fi

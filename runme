@@ -1,0 +1,6 @@
+#!/bin/bash
+#A simple script that displays the current date and time
+
+echo "The current date and time is: " 
+date
+exit 0;

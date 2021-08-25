@@ -1,0 +1,15 @@
+#!/bin/bash
+#Tries to add two different numbers
+#must declare int variables; unless specifically stated, everything is text
+declare -i num1
+declare -i num2
+declare -i TOT
+
+echo "Enter a number: "
+read num1
+echo "Enter a second number: "
+read num2
+TOT=$num1+$num2
+echo "The sum is:"$TOT
+#if not declared then the TOT would be 1+3 as text
+exit 0

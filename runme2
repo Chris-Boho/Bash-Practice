@@ -1,0 +1,5 @@
+#!/bin/bash
+#Prompt and read; doesn't actually add to PATH
+test=$1
+echo "You want to add" $test
+exit 0

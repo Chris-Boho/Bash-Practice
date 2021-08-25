@@ -1,0 +1,33 @@
+#!/bin/bash
+
+#Christopher Bohorquez  PID: 6039295
+#Write a script called doadd that will take 3 user entered numbers as integers
+#and perform either a sum or average based on the users choice. The data is to
+#be displayed through prompts and the results to be displayed.
+
+declare -i num1
+declare -i num2
+declare -i num3
+declare -i sum
+declare -i avg
+
+echo "Please enter your first number: "
+read num1
+echo "Please enter your second number: "
+read num2
+echo "Please enter your third number: "
+read num3
+
+echo "Would you like to perform a sum or avg?"
+read choice
+
+if [[ $choice = "sum" ]]; then
+  sum=$num1+$num2+$num3
+  echo "The sum is: " $sum
+else
+  sum=$num1+$num2+$num3
+  avg=$((sum/3));
+  echo "The avg is: " $avg
+fi
+
+exit 0
